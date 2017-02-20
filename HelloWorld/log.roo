@@ -1,0 +1,15 @@
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-17 15:39:35
+project setup --topLevelPackage com.dbtest --projectName "HelloWorld" --java 8 --packaging JAR
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-17 15:39:37
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-17 15:39:40
+jpa setup --provider HIBERNATE --database DERBY_EMBEDDED
+entity jpa --class ~.HelloDb
+field string --fieldName message --notNull
+repository jpa --all
+service --all
+web mvc setup
+web mvc view setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-17 16:34:44
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-20 10:08:57

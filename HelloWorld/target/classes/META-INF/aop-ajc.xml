@@ -1,0 +1,26 @@
+<aspectj>
+<aspects>
+<aspect name="com.dbtest.web.HelloDbsItemJsonController_Roo_JSON"/>
+<aspect name="com.dbtest.web.HelloDbsItemJsonController_Roo_Controller"/>
+<aspect name="com.dbtest.web.HelloDbsCollectionJsonController_Roo_JSON"/>
+<aspect name="com.dbtest.config.WebMvcConfiguration_Roo_WebMvcConfiguration"/>
+<aspect name="com.dbtest.HelloDb_Roo_Jpa_Entity"/>
+<aspect name="com.dbtest.repository.HelloDbRepository_Roo_Jpa_Repository"/>
+<aspect name="com.dbtest.web.HelloDbsItemThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.dbtest.web.MainController_Roo_Thymeleaf_MainController"/>
+<aspect name="com.dbtest.repository.HelloDbRepositoryCustom_Roo_Jpa_Repository_Custom"/>
+<aspect name="com.dbtest.service.impl.HelloDbServiceImpl_Roo_Service_Impl"/>
+<aspect name="com.dbtest.config.WebMvcConfiguration_Roo_ThymeleafUIConfiguration"/>
+<aspect name="com.dbtest.web.HelloDbDeserializer_Roo_EntityDeserializer"/>
+<aspect name="com.dbtest.service.api.HelloDbService_Roo_Service"/>
+<aspect name="com.dbtest.HelloDb_Roo_ToString"/>
+<aspect name="com.dbtest.web.HelloDbsCollectionJsonController_Roo_Controller"/>
+<aspect name="com.dbtest.config.jackson.DomainModelModule_Roo_DomainModelModule"/>
+<aspect name="com.dbtest.web.HelloDbsItemThymeleafController_Roo_Controller"/>
+<aspect name="com.dbtest.web.HelloDbsCollectionThymeleafController_Roo_Controller"/>
+<aspect name="com.dbtest.web.HelloDbsCollectionThymeleafController_Roo_Thymeleaf"/>
+<aspect name="com.dbtest.HelloDb_Roo_JavaBean"/>
+<aspect name="com.dbtest.repository.HelloDbRepositoryImpl_Roo_Jpa_Repository_Impl"/>
+</aspects>
+</aspectj>
+
