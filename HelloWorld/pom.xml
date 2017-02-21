@@ -14,7 +14,7 @@
   <version>1.0.0.BUILD-SNAPSHOT</version>
   <name>HelloWorld</name>
 
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <properties>
     <roo.version>2.0.0.M3</roo.version>
