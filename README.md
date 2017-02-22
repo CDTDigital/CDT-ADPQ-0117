@@ -12,7 +12,7 @@ During the Inception phase, Stanfield Systems defines how Disciplined Agile will
  *	Align with Enterprise Direction – Satisfy the requirements in the RFI.
  *	Explore Initial Scope – Four high-level requirements (epics) and some omitted capabilities
   *	Publish Product Information (administrator)
-  *	Compare Products to Create Order (user)
+  *	Compare Products to Create an Order (user)
   *	Cancel and Track Orders (user)
   *	Track, Analyze, and Visualize Orders (administrator)
   * No exception handling, logging, or authentication and authorization for prototype
@@ -24,9 +24,10 @@ During the Inception phase, Stanfield Systems defines how Disciplined Agile will
   *	Balancing priorities and time to meet schedule – delivery is a feature.  We mitigate this by prioritizing tasks to achieve minimal viable product.
   *	Limited time and staff for functional testing – quality may suffer.  We mitigate with automated unit testing and usability testing.  Impact is low as this is a prototype.
   
-For the CDT-ADPQ-0117 prototype, this phase lasted one sprint (one week).  We planned and tracked our inception phase goals and activities as cards in our Trello project management board.  
+For the CDT-ADPQ-0117 prototype, the Inception phase lasted one sprint (one week).  We planned and tracked our inception phase goals and activities as cards in our Trello project management board.  
 
 During the Construction phase, Stanfield Systems applies an agile Scrum-based life cycle.  Like Scrum, the basic Disciplined Agile life cycle:
+
 *	Manages work within time-boxed iterations (Sprints) 
 *	Incorporates frequent collaboration with daily stand-up meetings (Scrums)
 *	Employs a cross-functional, self-organizing team with developers, functional experts, and others
@@ -35,7 +36,7 @@ During the Construction phase, Stanfield Systems applies an agile Scrum-based li
 
 The basic Disciplined Agile life cycle has some minor differences from the Scrum life cycle.  For the CDT-ADPQ-0117 prototype, the most important difference is that our backlog contains both product features as well as project management and enterprise integration activities (such as documentation and usability analysis) necessary to successfully deliver the product into operations.  All of these product capabilities and project activities are tracked as cards in our Trello project management board.
 
-During the Transition phase, Stanfield Systems performs the activities necessary to validate and certify the product for release into the operational product.  For some organizations, especially those with significant regulatory, security, or safety requirements this phase may involve formal documentation and certifications that take a sprint of two to complete.  In other cases, the Transition phase may be as simple as an administrative handoff.  For the CDT-ADPQ-0117 prototype, the operational deployment is fully operational; however, the RFI requirements require some documentation and other administrative activities that may take a day or two to complete. 
+During the Transition phase, Stanfield Systems performs the activities necessary to validate and certify the product for release into the operational product.  For some organizations, especially those with significant regulatory, security, or safety requirements this phase may involve formal documentation and certifications that take a sprint or two to complete.  In other cases, the Transition phase may be as simple as an administrative handoff.  For the CDT-ADPQ-0117 prototype, the operational deployment is fully automated; however, the RFI requirements involve some documentation and other administrative activities that may take a day or two to complete. 
 
 ## Team Members (a, b)
  * Team Lead - Christine Cox
