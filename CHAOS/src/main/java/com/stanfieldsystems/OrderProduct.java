@@ -28,7 +28,6 @@ public class OrderProduct {
      * TODO Auto-generated field documentation
      *
      */
-    private String name;
 
     /**
      * TODO Auto-generated field documentation
