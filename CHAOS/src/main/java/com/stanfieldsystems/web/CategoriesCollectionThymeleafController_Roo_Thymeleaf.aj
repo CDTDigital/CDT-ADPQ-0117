@@ -99,6 +99,11 @@ privileged aspect CategoriesCollectionThymeleafController_Roo_Thymeleaf {
         if (search != null && StringUtils.hasText(search.getText())) {
             totalCategoriesCount = categoryService.count();
         }
+        
+        for (Category category : categories) {
+			System.out.print(category.getName());
+		}
+        
         DatatablesData<Category> datatablesData = new DatatablesData<Category>(categories, totalCategoriesCount, draw);
         return  ResponseEntity.ok(datatablesData);
     }
@@ -116,7 +121,7 @@ privileged aspect CategoriesCollectionThymeleafController_Roo_Thymeleaf {
     public ResponseEntity<Select2Data<Category>> CategoriesCollectionThymeleafController.select2(GlobalSearch search, Pageable pageable, Locale locale) {
         Page<Category> Categories = categoryService.findAll(search, pageable);
         String idExpression = "#{id}";
-        String textExpression = messageSource.getMessage("expression_category", null, "#{toString()}", locale);
+        String textExpression = messageSource.getMessage("expression_category", null, "#{getName()}", locale);
         Select2Data<Category> select2Data = new Select2Data<Category>(Categories, idExpression, textExpression);
         return  ResponseEntity.ok(select2Data);
     }

@@ -100,6 +100,10 @@ privileged aspect CustomerOrdersCollectionThymeleafController_Roo_Thymeleaf {
         if (search != null && StringUtils.hasText(search.getText())) {
             totalCustomerOrdersCount = customerOrderService.count();
         }
+        for (CustomerOrder customerOrder : customerOrders) {
+			System.out.println(customerOrder.getStatus() +"  " + customerOrder.getUserInfo());
+		}
+        
         DatatablesData<CustomerOrder> datatablesData = new DatatablesData<CustomerOrder>(customerOrders, totalCustomerOrdersCount, draw);
         return  ResponseEntity.ok(datatablesData);
     }
@@ -117,7 +121,7 @@ privileged aspect CustomerOrdersCollectionThymeleafController_Roo_Thymeleaf {
     public ResponseEntity<Select2Data<CustomerOrder>> CustomerOrdersCollectionThymeleafController.select2(GlobalSearch search, Pageable pageable, Locale locale) {
         Page<CustomerOrder> CustomerOrders = customerOrderService.findAll(search, pageable);
         String idExpression = "#{id}";
-        String textExpression = messageSource.getMessage("expression_customerOrder", null, "#{toString()}", locale);
+        String textExpression = messageSource.getMessage("expression_customerOrder", null, "#{getId()}", locale);
         Select2Data<CustomerOrder> select2Data = new Select2Data<CustomerOrder>(CustomerOrders, idExpression, textExpression);
         return  ResponseEntity.ok(select2Data);
     }

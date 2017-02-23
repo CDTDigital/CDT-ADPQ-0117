@@ -55,6 +55,11 @@ privileged aspect CustomerOrdersCollectionJsonController_Roo_JSON {
     public ResponseEntity<Page<CustomerOrder>> CustomerOrdersCollectionJsonController.list(GlobalSearch globalSearch, Pageable pageable) {
         
         Page<CustomerOrder> customerOrders = customerOrderService.findAll(globalSearch, pageable);
+        
+        for (CustomerOrder customerOrder : customerOrders) {
+			System.out.println(customerOrder.getUserInfo().getUserRole().getName());
+		}
+        
         return ResponseEntity.status(HttpStatus.FOUND).body(customerOrders);
     }
     

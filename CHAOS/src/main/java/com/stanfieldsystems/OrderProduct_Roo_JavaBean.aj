@@ -31,24 +31,6 @@ privileged aspect OrderProduct_Roo_JavaBean {
     /**
      * TODO Auto-generated method documentation
      * 
-     * @return String
-     */
-    public String OrderProduct.getName() {
-        return this.name;
-    }
-    
-    /**
-     * TODO Auto-generated method documentation
-     * 
-     * @param name
-     */
-    public void OrderProduct.setName(String name) {
-        this.name = name;
-    }
-    
-    /**
-     * TODO Auto-generated method documentation
-     * 
      * @return BigDecimal
      */
     public BigDecimal OrderProduct.getQuantity() {

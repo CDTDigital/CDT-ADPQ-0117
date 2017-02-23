@@ -14,8 +14,7 @@ privileged aspect OrderProduct_Roo_ToString {
      */
     public String OrderProduct.toString() {
         return "OrderProduct {" + 
-                "name='" + name + '\'' + 
-                ", quantity='" + quantity + '\'' + 
+                "quantity='" + quantity + '\'' + 
                 ", price='" + price + '\'' + 
                 ", id='" + id + '\'' + 
                 ", version='" + version + '\'' + "}" + super.toString();

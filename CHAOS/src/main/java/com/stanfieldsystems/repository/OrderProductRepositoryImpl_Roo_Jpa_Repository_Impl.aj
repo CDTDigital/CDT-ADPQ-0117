@@ -27,11 +27,6 @@ privileged aspect OrderProductRepositoryImpl_Roo_Jpa_Repository_Impl {
     /**
      * TODO Auto-generated attribute documentation
      */
-    private static final String OrderProductRepositoryImpl.NAME = "name";
-    
-    /**
-     * TODO Auto-generated attribute documentation
-     */
     private static final String OrderProductRepositoryImpl.QUANTITY = "quantity";
     
     /**
@@ -52,11 +47,10 @@ privileged aspect OrderProductRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<OrderProduct> query = from(orderProduct);
         
-        Path<?>[] paths = new Path<?>[] {orderProduct.name,orderProduct.quantity,orderProduct.price};        
+        Path<?>[] paths = new Path<?>[] {orderProduct.quantity,orderProduct.price};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
-			.map(NAME, orderProduct.name)
 			.map(QUANTITY, orderProduct.quantity)
 			.map(PRICE, orderProduct.price);
         
@@ -83,11 +77,10 @@ privileged aspect OrderProductRepositoryImpl_Roo_Jpa_Repository_Impl {
         Assert.notNull(customerOrder, "customerOrder is required");
         
         query.where(orderProduct.customerOrder.eq(customerOrder));
-        Path<?>[] paths = new Path<?>[] {orderProduct.name,orderProduct.quantity,orderProduct.price};        
+        Path<?>[] paths = new Path<?>[] {orderProduct.quantity,orderProduct.price};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
-			.map(NAME, orderProduct.name)
 			.map(QUANTITY, orderProduct.quantity)
 			.map(PRICE, orderProduct.price);
         
@@ -114,11 +107,10 @@ privileged aspect OrderProductRepositoryImpl_Roo_Jpa_Repository_Impl {
         Assert.notNull(product, "product is required");
         
         query.where(orderProduct.product.eq(product));
-        Path<?>[] paths = new Path<?>[] {orderProduct.name,orderProduct.quantity,orderProduct.price};        
+        Path<?>[] paths = new Path<?>[] {orderProduct.quantity,orderProduct.price};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
-			.map(NAME, orderProduct.name)
 			.map(QUANTITY, orderProduct.quantity)
 			.map(PRICE, orderProduct.price);
         

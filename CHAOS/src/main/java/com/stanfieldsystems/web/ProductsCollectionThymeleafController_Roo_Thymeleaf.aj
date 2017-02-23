@@ -99,6 +99,11 @@ privileged aspect ProductsCollectionThymeleafController_Roo_Thymeleaf {
         if (search != null && StringUtils.hasText(search.getText())) {
             totalProductsCount = productService.count();
         }
+        
+        for (Product product : products) {
+			System.out.println(product.getName() + "" + product.getCategory());
+		}
+        
         DatatablesData<Product> datatablesData = new DatatablesData<Product>(products, totalProductsCount, draw);
         return  ResponseEntity.ok(datatablesData);
     }
@@ -116,7 +121,7 @@ privileged aspect ProductsCollectionThymeleafController_Roo_Thymeleaf {
     public ResponseEntity<Select2Data<Product>> ProductsCollectionThymeleafController.select2(GlobalSearch search, Pageable pageable, Locale locale) {
         Page<Product> Products = productService.findAll(search, pageable);
         String idExpression = "#{id}";
-        String textExpression = messageSource.getMessage("expression_product", null, "#{toString()}", locale);
+        String textExpression = messageSource.getMessage("expression_product", null, "#{getName()}", locale);
         Select2Data<Product> select2Data = new Select2Data<Product>(Products, idExpression, textExpression);
         return  ResponseEntity.ok(select2Data);
     }
