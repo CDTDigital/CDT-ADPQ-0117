@@ -59,3 +59,9 @@ web mvc controller --all --pathPrefix /api
 // script --file CHAOS.roo
 exit
 // Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-22 12:33:16
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-22 16:01:24
+repository jpa --all
+service --all
+web mvc setup
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
