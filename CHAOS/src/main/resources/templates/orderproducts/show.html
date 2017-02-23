@@ -168,11 +168,7 @@
             <ul class="list-unstyled" id="containerFields">
                   <li id="orderproduct-product-field" data-z="b0009012">
               	    <strong data-th-text="#{label_orderproduct_product}">product</strong>
-                    <span data-th-text="*{{product}}">productValue</span>
-           	      </li>
-                  <li id="orderproduct-name-field" data-z="4f41724c">
-              	    <strong data-th-text="#{label_orderproduct_name}">name</strong>
-                    <span data-th-text="*{{name}}">nameValue</span>
+                    <span data-th-text="*{{product.name}}">productValue</span>
            	      </li>
                   <li id="orderproduct-quantity-field" data-z="5abfc3cc">
               	    <strong data-th-text="#{label_orderproduct_quantity}">quantity</strong>
@@ -213,7 +209,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>

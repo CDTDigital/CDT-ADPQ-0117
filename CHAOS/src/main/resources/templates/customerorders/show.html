@@ -168,11 +168,11 @@
             <ul class="list-unstyled" id="containerFields">
                   <li id="customerorder-userinfo-field" data-z="a7790dc5">
               	    <strong data-th-text="#{label_customerorder_userinfo}">userInfo</strong>
-                    <span data-th-text="*{{userInfo}}">userInfoValue</span>
+                    <span data-th-text="*{{userInfo.displayName}}">userInfoValue</span>
            	      </li>
                   <li id="customerorder-status-field" data-z="32d74805">
               	    <strong data-th-text="#{label_customerorder_status}">status</strong>
-                    <span data-th-text="*{{status}}">statusValue</span>
+                    <span data-th-text="*{{status.name}}">statusValue</span>
            	      </li>
                   <li id="customerorder-orderdate-field" data-z="d5703559">
               	    <strong data-th-text="#{label_customerorder_orderdate}">orderDate</strong>
@@ -209,7 +209,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>

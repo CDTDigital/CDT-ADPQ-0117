@@ -175,18 +175,18 @@
                 <caption class="sr-only" data-th-text="#{label_list_entity(#{label_customerorder_plural})}">CustomerOrder List</caption>
                 <thead>
                   <tr>
-                    <th data-data="userInfo" data-th-text="#{label_customerorder_userinfo}">userInfo</th>
-                    <th data-data="status" data-th-text="#{label_customerorder_status}">status</th>
                     <th data-data="orderDate" data-th-text="#{label_customerorder_orderdate}">orderDate</th>
+                    <th data-data="userInfo.displayName" data-th-text="#{label_customerorder_userinfo}">userInfo</th>
+                    <th data-data="status.name" data-th-text="#{label_customerorder_status}">status</th>
                     <th data-data="totalPrice" data-th-text="#{label_customerorder_totalprice}">totalPrice</th>
                     <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
                   </tr>
                 </thead>
                 <tbody data-th-remove="all">
                   <tr>
+                    <td>orderDate</td>
                     <td>userInfo</td>
                     <td>status</td>
-                    <td>orderDate</td>
                     <td>totalPrice</td>
                     <td data-th-text="#{label_tools}">Tools</td>
                   </tr>
@@ -221,7 +221,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>

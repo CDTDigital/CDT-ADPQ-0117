@@ -178,19 +178,11 @@
     <div class="col-md-6">
       <!-- Select2 -->
       <select data-th-field="*{product}" class="form-control dropdown-select-ajax" data-allow-clear="true" data-data-ajax--url="${(#mvc.url('ProductsCollectionThymeleafController#select2')).build()}" data-ajax--cache="true" data-ajax--delay="250" data-ajax--data-type="json" data-data-placeholder="#{info_select_an_option}">
-          <option data-th-unless="*{product} == null" data-th-value="*{product.id}" data-th-text="*{product}" selected="selected">Product</option>
+          <option data-th-unless="*{product} == null" data-th-value="*{product.id}" data-th-text="*{product.name}" selected="selected">Product</option>
       </select>
       <span data-th-classappend="${#fields.hasErrors('product')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('product')}" aria-hidden="true"></span>
       <span id="product-error" class="help-block" data-th-if="${#fields.hasErrors('product')}" data-th-errors="*{product}">Error message.</span>
     </div>
-</div>
-<div class="form-group has-error has-feedback" data-z="4f41724c" id="orderproduct-name-field" data-th-classappend="${#fields.hasErrors('name')}? 'has-error has-feedback'" data-th-class="form-group">
-  <label for="name" class="col-md-3 control-label" data-th-text="#{label_orderproduct_name}">name</label>
-  <div class="col-md-3">
-    <input id="name" name="name" data-th-value="*{{name}}" type="text" class="form-control" placeholder="name" data-th-placeholder="#{label_orderproduct_name}" data-toggle="tooltip" aria-describedby="nameStatus" />
-      <span data-th-classappend="${#fields.hasErrors('name')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('name')}" aria-hidden="true"></span>
-      <span id="name-error" class="help-block" data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}">Error message.</span>
-  </div>
 </div>
 <div class="form-group has-error has-feedback" data-z="5abfc3cc" id="orderproduct-quantity-field" data-th-classappend="${#fields.hasErrors('quantity')}? 'has-error has-feedback'" data-th-class="form-group">
   <label for="quantity" class="col-md-3 control-label" data-th-text="#{label_orderproduct_quantity}">quantity</label>
@@ -213,7 +205,7 @@
     <div class="col-md-6">
       <!-- Select2 -->
       <select data-th-field="*{customerOrder}" class="form-control dropdown-select-ajax" data-allow-clear="true" data-data-ajax--url="${(#mvc.url('CustomerOrdersCollectionThymeleafController#select2')).build()}" data-ajax--cache="true" data-ajax--delay="250" data-ajax--data-type="json" data-data-placeholder="#{info_select_an_option}">
-          <option data-th-unless="*{customerOrder} == null" data-th-value="*{customerOrder.id}" data-th-text="*{customerOrder}" selected="selected">CustomerOrder</option>
+          <option data-th-unless="*{customerOrder} == null" data-th-value="*{customerOrder.id}" data-th-text="*{customerOrder.id}" selected="selected">CustomerOrder</option>
       </select>
       <span data-th-classappend="${#fields.hasErrors('customerOrder')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('customerOrder')}" aria-hidden="true"></span>
       <span id="customerOrder-error" class="help-block" data-th-if="${#fields.hasErrors('customerOrder')}" data-th-errors="*{customerOrder}">Error message.</span>
@@ -250,7 +242,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>

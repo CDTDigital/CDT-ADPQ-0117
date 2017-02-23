@@ -175,20 +175,18 @@
                 <caption class="sr-only" data-th-text="#{label_list_entity(#{label_orderproduct_plural})}">OrderProduct List</caption>
                 <thead>
                   <tr>
-                    <th data-data="product" data-th-text="#{label_orderproduct_product}">product</th>
-                    <th data-data="name" data-th-text="#{label_orderproduct_name}">name</th>
-                    <th data-data="quantity" data-th-text="#{label_orderproduct_quantity}">quantity</th>
                     <th data-data="price" data-th-text="#{label_orderproduct_price}">price</th>
-                    <th data-data="customerOrder" data-th-text="#{label_orderproduct_customerorder}">customerOrder</th>
+                    <th data-data="product.name" data-th-text="#{label_orderproduct_product}">product</th>
+                    <th data-data="quantity" data-th-text="#{label_orderproduct_quantity}">quantity</th>
+                    <th data-data="customerOrder.id" data-th-text="#{label_orderproduct_customerorder}">customerOrder</th>
                     <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
                   </tr>
                 </thead>
                 <tbody data-th-remove="all">
                   <tr>
-                    <td>product</td>
-                    <td>name</td>
-                    <td>quantity</td>
                     <td>price</td>
+                    <td>product</td>
+                    <td>quantity</td>
                     <td>customerOrder</td>
                     <td data-th-text="#{label_tools}">Tools</td>
                   </tr>
@@ -223,7 +221,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>
