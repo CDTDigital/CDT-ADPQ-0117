@@ -99,6 +99,11 @@ privileged aspect StatusesCollectionThymeleafController_Roo_Thymeleaf {
         if (search != null && StringUtils.hasText(search.getText())) {
             totalStatusesCount = statusService.count();
         }
+        
+        for (Status status : statuses) {
+			System.out.println(status.getName());
+		}
+        
         DatatablesData<Status> datatablesData = new DatatablesData<Status>(statuses, totalStatusesCount, draw);
         return  ResponseEntity.ok(datatablesData);
     }
@@ -116,7 +121,7 @@ privileged aspect StatusesCollectionThymeleafController_Roo_Thymeleaf {
     public ResponseEntity<Select2Data<Status>> StatusesCollectionThymeleafController.select2(GlobalSearch search, Pageable pageable, Locale locale) {
         Page<Status> Statuses = statusService.findAll(search, pageable);
         String idExpression = "#{id}";
-        String textExpression = messageSource.getMessage("expression_status", null, "#{toString()}", locale);
+        String textExpression = messageSource.getMessage("expression_status", null, "#{getName()}", locale);
         Select2Data<Status> select2Data = new Select2Data<Status>(Statuses, idExpression, textExpression);
         return  ResponseEntity.ok(select2Data);
     }

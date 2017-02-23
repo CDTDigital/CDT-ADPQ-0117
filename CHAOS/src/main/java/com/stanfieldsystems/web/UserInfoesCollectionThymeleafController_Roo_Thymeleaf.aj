@@ -99,6 +99,10 @@ privileged aspect UserInfoesCollectionThymeleafController_Roo_Thymeleaf {
         if (search != null && StringUtils.hasText(search.getText())) {
             totalUserInfoesCount = userInfoService.count();
         }
+        
+        for (UserInfo userInfo : userInfoes) {
+			System.out.println(userInfo.getUserRole());
+		}
         DatatablesData<UserInfo> datatablesData = new DatatablesData<UserInfo>(userInfoes, totalUserInfoesCount, draw);
         return  ResponseEntity.ok(datatablesData);
     }
@@ -116,7 +120,7 @@ privileged aspect UserInfoesCollectionThymeleafController_Roo_Thymeleaf {
     public ResponseEntity<Select2Data<UserInfo>> UserInfoesCollectionThymeleafController.select2(GlobalSearch search, Pageable pageable, Locale locale) {
         Page<UserInfo> UserInfoes = userInfoService.findAll(search, pageable);
         String idExpression = "#{id}";
-        String textExpression = messageSource.getMessage("expression_userInfo", null, "#{toString()}", locale);
+        String textExpression = messageSource.getMessage("expression_userInfo", null, "#{getDisplayName()}", locale);
         Select2Data<UserInfo> select2Data = new Select2Data<UserInfo>(UserInfoes, idExpression, textExpression);
         return  ResponseEntity.ok(select2Data);
     }
