@@ -102,4 +102,10 @@ public class Product {
     @OneToMany(cascade = { javax.persistence.CascadeType.MERGE, javax.persistence.CascadeType.PERSIST }, fetch = FetchType.LAZY, mappedBy = "product")
     @RooJpaRelation(type = JpaRelationType.AGGREGATION)
     private Set<OrderProduct> orderProducts = new HashSet<OrderProduct>();
+
+    /**
+     * TODO Auto-generated field documentation
+     *
+     */
+    private String UNSPSC;
 }

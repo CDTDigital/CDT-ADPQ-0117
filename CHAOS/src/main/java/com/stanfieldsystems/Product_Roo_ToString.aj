@@ -25,6 +25,7 @@ privileged aspect Product_Roo_ToString {
                 ", OEM_name='" + OEM_name + '\'' + 
                 ", SKU='" + SKU + '\'' + 
                 ", unitMeasure='" + unitMeasure + '\'' + 
+                ", UNSPSC='" + UNSPSC + '\'' + 
                 ", id='" + id + '\'' + 
                 ", version='" + version + '\'' + 
                 ", ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE='" + ITERABLE_TO_ADD_CANT_BE_NULL_MESSAGE + '\'' + 

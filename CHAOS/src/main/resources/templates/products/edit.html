@@ -272,6 +272,14 @@
       <span id="unitMeasure-error" class="help-block" data-th-if="${#fields.hasErrors('unitMeasure')}" data-th-errors="*{unitMeasure}">Error message.</span>
   </div>
 </div>
+<div class="form-group has-error has-feedback" data-z="c9739104" id="product-unspsc-field" data-th-classappend="${#fields.hasErrors('UNSPSC')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="UNSPSC" class="col-md-3 control-label" data-th-text="#{label_product_unspsc}">UNSPSC</label>
+  <div class="col-md-3">
+    <input id="UNSPSC" name="UNSPSC" data-th-value="*{{UNSPSC}}" type="text" class="form-control" placeholder="UNSPSC" data-th-placeholder="#{label_product_unspsc}" data-toggle="tooltip" aria-describedby="UNSPSCStatus" />
+      <span data-th-classappend="${#fields.hasErrors('UNSPSC')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('UNSPSC')}" aria-hidden="true"></span>
+      <span id="UNSPSC-error" class="help-block" data-th-if="${#fields.hasErrors('UNSPSC')}" data-th-errors="*{UNSPSC}">Error message.</span>
+  </div>
+</div>
 
               </fieldset>
 

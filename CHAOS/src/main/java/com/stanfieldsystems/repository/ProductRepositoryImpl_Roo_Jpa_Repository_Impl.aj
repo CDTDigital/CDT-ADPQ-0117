@@ -79,6 +79,11 @@ privileged aspect ProductRepositoryImpl_Roo_Jpa_Repository_Impl {
     private static final String ProductRepositoryImpl.UNIT_MEASURE = "unitMeasure";
     
     /**
+     * TODO Auto-generated attribute documentation
+     */
+    private static final String ProductRepositoryImpl.UNSPSC = "UNSPSC";
+    
+    /**
      * TODO Auto-generated method documentation
      * 
      * @param globalSearch
@@ -91,7 +96,7 @@ privileged aspect ProductRepositoryImpl_Roo_Jpa_Repository_Impl {
         
         JPQLQuery<Product> query = from(product);
         
-        Path<?>[] paths = new Path<?>[] {product.name,product.description,product.quantity,product.MSRP,product.price,product.discount,product.CLIN,product.OEM,product.OEM_name,product.SKU,product.unitMeasure};        
+        Path<?>[] paths = new Path<?>[] {product.name,product.description,product.quantity,product.MSRP,product.price,product.discount,product.CLIN,product.OEM,product.OEM_name,product.SKU,product.unitMeasure,product.UNSPSC};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
@@ -105,7 +110,8 @@ privileged aspect ProductRepositoryImpl_Roo_Jpa_Repository_Impl {
 			.map(OEM, product.OEM)
 			.map(OEM___NAME, product.OEM_name)
 			.map(SKU, product.SKU)
-			.map(UNIT_MEASURE, product.unitMeasure);
+			.map(UNIT_MEASURE, product.unitMeasure)
+			.map(UNSPSC, product.UNSPSC);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);
@@ -130,7 +136,7 @@ privileged aspect ProductRepositoryImpl_Roo_Jpa_Repository_Impl {
         Assert.notNull(category, "category is required");
         
         query.where(product.category.eq(category));
-        Path<?>[] paths = new Path<?>[] {product.name,product.description,product.quantity,product.MSRP,product.price,product.discount,product.CLIN,product.OEM,product.OEM_name,product.SKU,product.unitMeasure};        
+        Path<?>[] paths = new Path<?>[] {product.name,product.description,product.quantity,product.MSRP,product.price,product.discount,product.CLIN,product.OEM,product.OEM_name,product.SKU,product.unitMeasure,product.UNSPSC};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
@@ -144,7 +150,8 @@ privileged aspect ProductRepositoryImpl_Roo_Jpa_Repository_Impl {
 			.map(OEM, product.OEM)
 			.map(OEM___NAME, product.OEM_name)
 			.map(SKU, product.SKU)
-			.map(UNIT_MEASURE, product.unitMeasure);
+			.map(UNIT_MEASURE, product.unitMeasure)
+			.map(UNSPSC, product.UNSPSC);
         
         applyPagination(pageable, query, mapping);
         applyOrderById(query);

@@ -245,4 +245,22 @@ privileged aspect Product_Roo_JavaBean {
         this.orderProducts = orderProducts;
     }
     
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return String
+     */
+    public String Product.getUNSPSC() {
+        return this.UNSPSC;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param UNSPSC
+     */
+    public void Product.setUNSPSC(String UNSPSC) {
+        this.UNSPSC = UNSPSC;
+    }
+    
 }
