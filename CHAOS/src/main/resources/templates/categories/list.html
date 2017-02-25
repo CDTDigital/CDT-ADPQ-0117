@@ -193,6 +193,48 @@
                   title=#{label_delete_entity(#{label_category_plural})}, message=#{info_delete_item_confirm}, baseUrl = @{/categories/})">
               </div>
           </div>
+          
+           <div id="details-level-1">
+            <ul class="nav nav-tabs" id="nav-tabs">
+                <li class="active">
+                  <a id="products-detail-table-tab" data-toggle="tab" href="#detail-products-detail" data-z="aa4160f2">Products</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="tab-content">
+              <div id="detail-products-detail" class="tab-pane active">
+                <!--START DETAIL TABLE-->
+                <div class="table-responsive">
+                    <table id="products-detail-table" class="table table-striped table-hover table-bordered" data-z="aa4160f2" data-row-id="id" data-datatables="true" data-parent-table="category-entity-table" data-order="[[ 0, &quot;asc&quot; ]]" data-data-load-url="${(#mvc.url('CategoriesItemProductsThymeleafController#datatables')).buildAndExpand('_PARENTID_')}" data-data-show-url="${(#mvc.url('ProductsItemThymeleafController#show')).buildAndExpand('_ID_')}" data-data-edit-url="${(#mvc.url('ProductsItemThymeleafController#editForm')).buildAndExpand('_ID_')}" data-data-delete-url="${(#mvc.url('CategoriesItemProductsThymeleafController#removeFromProducts')).arg(1,'_ID_').buildAndExpand('_PARENTID_')}" data-data-create-url="${(#mvc.url('CategoriesItemProductsThymeleafController#createForm')).buildAndExpand('_PARENTID_')}">
+                      <caption data-th-text="#{label_list_of_entity(#{label_category_products})}">Products List</caption>
+                      <thead>
+                        <tr>
+                              <th data-data="name" data-th-text="#{label_category_products_name}">name</th>
+                              <th data-data="category.name" data-th-text="#{label_category_products_category}">category</th>
+                              <th data-data="description" data-th-text="#{label_category_products_description}">description</th>
+                              <th data-data="quantity" data-th-text="#{label_category_products_quantity}">quantity</th>
+                              <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
+                        </tr>
+                      </thead>
+                      <tbody data-th-remove="all">
+                        <tr>
+                              <td>name</td>
+                              <td>category</td>
+                              <td>description</td>
+                              <td>quantity</td>
+                          <td data-th-text="#{label_tools}">Tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- content replaced by modal-confirm fragment of modal-confirm.html -->
+                    <div data-th-replace="fragments/modal-confirm-delete :: modalConfirmDelete(tableId='products-detail-table',
+                        title=#{label_delete_entity(#{label_category_products})}, message=#{info_delete_item_confirm})">
+                    </div>
+                </div> <!--/table-responsive">
+                <!--END TABLE-->
+              </div> <!--/tab-pane -->
+            </div> <!--/tab-content-->
+        </div>
           <!-- /TABLE -->
 
 
@@ -217,7 +259,7 @@
       <div class="col-sm-6 col-sm-offset-3">
         <small class="clearfix">
             Made with <a href="http://projects.spring.io/spring-roo/" target="_blank">
-            Spring Roo � 2016</a> •
+            Spring Roo � 2016</a> •
             We <span class="glyphicon glyphicon-heart"></span>
             <a href="https://github.com/spring-projects/spring-roo/" target="_blank">Open source</a> •
             <a data-th-href="@{/accessibility}" href="../accessibility.html"><span data-th-text="#{label_accessibility}">Accessibility</span></a>

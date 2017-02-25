@@ -101,7 +101,7 @@ privileged aspect OrderProductsCollectionThymeleafController_Roo_Thymeleaf {
         }
         
         for (OrderProduct orderProduct : orderProducts) {
-			System.out.println(orderProduct.getCustomerOrder() + ""+ orderProduct.getProduct());
+			System.out.println(orderProduct.getCustomerOrder() + ""+ orderProduct.getProduct().getName());
 		}
         
         DatatablesData<OrderProduct> datatablesData = new DatatablesData<OrderProduct>(orderProducts, totalOrderProductsCount, draw);

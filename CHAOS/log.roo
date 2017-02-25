@@ -65,3 +65,27 @@ service --all
 web mvc setup
 web mvc controller --all --responseType THYMELEAF
 web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-24 14:19:11
+focus --class ~.Product
+field string --fieldName UNSPSC
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-24 14:27:08
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log opened at 2017-02-24 15:54:38
+web mvc detail --entity ~.Category --field products --responseType THYMELEAF
+service --all
+repository jpa --entity ~.Category 
+web mvc finder --all 
+web mvc templates setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --responseType JSON --pathPrefix /api
+web mvc detail --entity ~.UserRole --field userInfos --responseType THYMELEAF
+web mvc detail --entity ~.UserInfo --field customerOrders --responseType THYMELEAF
+web mvc detail --entity ~.Product --field orderProducts --responseType THYMELEAF
+web mvc detail --entity ~.Status --field customerOrders --responseType THYMELEAF
+web mvc detail --entity ~.CustomerOrder --field orderProducts --responseType THYMELEAF
+service --all 
+repository jpa --all 
+web mvc controller --all 
+web mvc finder --all 
+web mvc templates setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF
+// Spring Roo 2.0.0.M3 [rev 20a0f71] log closed at 2017-02-24 16:30:24
