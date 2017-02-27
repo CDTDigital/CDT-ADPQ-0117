@@ -7,7 +7,7 @@ Stanfield Systems applies a Disciplined Agile life cycle for product delivery (S
 
 During the Inception phase, Stanfield Systems defines how Disciplined Agile will be implemented for a specific project or product release.  The Inception phase decisions for the CDT-ADPQ-0117 prototype were significantly influenced by the short delivery cycle and the delivery target of a prototype rather than an operational product.  This phase achieves the following goals:
 
- * Form Initial Team – Team roles align with our typical Disciplined Agile delivery team structure.  Staff availability requires some team members to fill multiple roles (see 2 below)
+ * Form Initial Team – Team roles align with our typical Disciplined Agile delivery team structure.  Staff availability requires some team members to fill multiple roles (see __Team Members__ below)
  *	Develop Common Vision – Demonstrate our agile processes and automated DevOps capabilities.
  *	Align with Enterprise Direction – Satisfy the requirements in the RFI.
  *	Explore Initial Scope – Four high-level requirements (epics) and some omitted capabilities
@@ -16,7 +16,7 @@ During the Inception phase, Stanfield Systems defines how Disciplined Agile will
   *	Cancel and Track Orders (user)
   *	Track, Analyze, and Visualize Orders (administrator)
   * No exception handling, logging, or authentication and authorization for prototype
- *	Identify Initial Technical Strategy – domain-driven rapid prototyping tools generate the basic product scaffolding to create, retrieve, update, and delete domain entities (e.g. products, users, orders) (see 4 and 5 below)
+ *	Identify Initial Technical Strategy – domain-driven rapid prototyping tools generate the basic product scaffolding to create, retrieve, update, and delete domain entities (e.g. products, users, orders) (see __DevOps Tools and Technologies__ and __Application Tools and Technologies__ below)
  *	Develop Initial Release Plan – One release with three week long sprints -  One inception Sprint and two Construction sprints.
  *	Secure Funding – Proposal budget approved based on hourly rates for team members.
  *	Form Work Environment – Most team members share office space at the same address; however, in some cases remote collaboration is required.  Webex is used for virtual meetings and Trello is used to collaborate and track project activities
