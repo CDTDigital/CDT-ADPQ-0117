@@ -209,18 +209,18 @@
                       <caption data-th-text="#{label_list_of_entity(#{label_status_customerorders})}">CustomerOrders List</caption>
                       <thead>
                         <tr>
+                              <th data-data="orderDate" data-th-text="#{label_status_customerorders_orderdate}">orderDate</th>
                               <th data-data="userInfo.displayName" data-th-text="#{label_status_customerorders_userinfo}">userInfo</th>
                               <th data-data="status.name" data-th-text="#{label_status_customerorders_status}">status</th>
-                              <th data-data="orderDate" data-th-text="#{label_status_customerorders_orderdate}">orderDate</th>
                               <th data-data="totalPrice" data-th-text="#{label_status_customerorders_totalprice}">totalPrice</th>
                               <th data-data="id" data-orderable="false" data-searchable="false" class="dttools" data-th-text="#{label_tools}">Tools</th>
                         </tr>
                       </thead>
                       <tbody data-th-remove="all">
                         <tr>
+                              <td>orderDate</td>
                               <td>userInfo</td>
                               <td>status</td>
-                              <td>orderDate</td>
                               <td>totalPrice</td>
                           <td data-th-text="#{label_tools}">Tools</td>
                         </tr>
