@@ -66,6 +66,10 @@ Daily standup meetings were facilitated through WebEx, where each developer info
 A potential issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue. Refer to <Sprint1 in progress. PNG>. 
 
 ### Sprint Review
+At the end of the sprint, the development team demonstrated completed user stories verifying a potentially shippable product increment. 
+
+### Sprint Retrospective
+A comprehensive, but very focused sprint retrospective meeting was facilitated to capture lessons learned from the sprint and further promote a high performing team. 
 
 ## RFI Requirements
 
