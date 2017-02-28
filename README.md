@@ -81,7 +81,7 @@ The remainder of this document addresses specific requirements within the RFI.
  * Backend Web Developer - Greg Fortune, Bhagyesh Patel
  * DevOps Engineer - Greg Fortune
 
-### User-Centric Design (c, d)
+### User-Centric Design (c, d, j)
  - [ ] User team (People) - describe characteristics and number
  
 The User-centered design (UCD) process outlines the phases throughout a design and development life-cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
@@ -113,7 +113,7 @@ We developed a customer journey map, which is a visualization of the process tha
 
 In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
 
-### DevOps Tools and Technologies (e, f, m, n)
+### DevOps Tools and Technologies (e, f, m, n, o, p, q, r, s, t)
 
 Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our PAAS hosting in the cloud.
 
@@ -127,7 +127,9 @@ Stanfield Systems uses several open source tools and technologies to support con
  * Docker - containerization
  * Swagger - RESTful API documentation
 
-### Application Tools and Technologies (k, l)
+Documentation for installing and running the prototype on another machine is provided in the <>
+
+### Application Tools and Technologies (k, l, n)
 
 Stanfield Systems used several open source tools and technologies for developing the prototype.  
 
@@ -136,6 +138,7 @@ Stanfield Systems used several open source tools and technologies for developing
  * JQuery - client side scripting
  * Thymeleaf - view engine
  * Derby - embedded database
+ * JUnit - automated unit testing
  * Java 8 - server side development toolkit
  * Maven - dependency and build management
  * Spring Boot - Spring quick start framework
