@@ -74,7 +74,32 @@ During the Transition phase, Stanfield Systems performs the activities necessary
  - [ ] Section 508 Compliance - describe approach/tools - reference artifacts (e.g. tool results)
  - [ ] Usability Testing - describe approach - reference artifacts (e.g. test cases, results)
 
-## Agile Development Process (j)
- - [ ] Summarize Disciplined Agile - reference artifacts as appropriate
- - [ ] Summarize Trello for Project Management - reference screenshots for each sprint
- - [ ] Summarize Scrum for Construction Iterations - reference meeting results (e.g. Trello screen shots, sprint backlogs, issues, risks)
+## Agile Project Management
+Stanfield Systems managed the project sprints with Trello, a collaboration and task management tool that utilizes a board, lists, and cards to effectively manage the collection of backlog activities.  The real time updates afforded by the tool were critical to manage standups with remote team members. Team members are informed about all aspects of planning and daily standup activities and understand their role in enabling success. The board is organized into individual lists to track the product backlog, sprint backlog, completed sprints, and issues/risks. The lists are further broken down into cards, or activities for categorization, prioritization and assignment. The board facilitated sprint planning and was used during the daily standups to drive discussions and decisions. Updates are real-time and interactive allowing comments, checklists, labels, and attachments promoting team collaboration.
+
+## Agile Product Development
+Stanfield Systems used an agile Scrum methodology to implement the CDT-ADPQ-0117 prototype.  
+
+### Develop backlog
+Four Epic user stories, which described the project need at a very high level, were developed by the product owner and added to the product backlog. Prior to sprint planning, the product owner prioritized the Epics, taking the highest priority need and dependencies into consideration. Epics were color coded to categorize related user stories. The four prioritized epics were:
+
+ 1.	Publish Product Information
+ 2.	Compare and Order
+ 3.	Cancel and Track Orders
+ 4.	Track, Analyze, and Visualize Orders
+ 
+Individual user stories were derived from the Epic, color coded by category to match the Epic, and grouped together to help the developers understand the primary intent of the deconstructed user stories. The epic was then deleted from the backlog. Refer to “Epic User Stories” at <insert doclink> to review the four epics and deconstructed user stories.
+
+### Sprint Planning
+The timeboxed sprint planning meeting is a collaborative effort to commit documented backlog items into a sprint. Due to the aggressive timeline, only two sprints were planned. The user stories were clarified by the product owner and developers prioritized and estimated the backlog for potential sprint candidates. Two project activities remained from the Inception Phase sprint related to technology. Refer to <Sprint 1 Planning.PNG> for an example of the Trello board at the beginning of the first Construction Phase sprint meeting.
+
+### Sprint Backlog
+User stories, or cards, were committed to the sprint backlog list once developers confirmed they understood the development and had the capacity to meet their commitment within the sprint timebox. Once the sprint backlog reached capacity, the cards were updated with activity owners and the daily standup meetings were scheduled.
+
+### Daily Scrum
+Daily standup meetings were facilitated through WebEx, where each developer informed the team of their current work, expectations of work to be completed the following day, and any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list, and then moved to the “Done Sprint 1” list in Trello once done. 
+
+A potential issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue. Refer to <Sprint1 in progress. PNG>. 
+
+### Sprint Review
+
