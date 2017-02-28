@@ -1,7 +1,7 @@
 # CDT-ADPQ-0117
 Prototype for CDT-ADPQ-0117
 
-## Summary of Technical Approach
+## Technical Approach
 
 Stanfield Systems applies a Disciplined Agile life cycle for product delivery (See http://www.disciplinedagiledelivery.com/process/).  Disciplined Agile is process decision framework for delivering projects of varying sizes within an enterprise environment.  Disciplined Agile recognizes that a product release is part of a larger product life cycle that operates within an operational enterprise.  Consequently, in addition to the Construction phase at the core of all agile methodologies, Disciplined Agile includes a short Inception phase to envision and plan the product release and a short Transition phase to deploy and release the product into operations.  
 
@@ -24,9 +24,9 @@ During the Inception phase, Stanfield Systems defines how Disciplined Agile will
   *	Balancing priorities and time to meet schedule – delivery is a feature.  We mitigate this by prioritizing tasks to achieve minimal viable product.
   *	Limited time and staff for functional testing – quality may suffer.  We mitigate with automated unit testing and usability testing.  Impact is low as this is a prototype.
   
-For the CDT-ADPQ-0117 prototype, the Inception phase lasted one sprint (one week).  We planned and tracked our inception phase goals and activities as cards in our Trello project management board.  
+For the CDT-ADPQ-0117 prototype, the Inception phase lasted one sprint (one week).  We planned and tracked our inception phase goals and activities as cards in our Trello project management board (see __Agile Project Management__ below).  
 
-During the Construction phase, Stanfield Systems applies an agile Scrum-based life cycle.  Like Scrum, the basic Disciplined Agile life cycle:
+During the Construction phase, Stanfield Systems applies an agile Scrum-based life cycle (see __Agile Product Development__ below).  Like Scrum, the basic Disciplined Agile life cycle:
 
 *	Manages work within time-boxed iterations (Sprints) 
 *	Incorporates frequent collaboration with daily stand-up meetings (Scrums)
@@ -37,90 +37,6 @@ During the Construction phase, Stanfield Systems applies an agile Scrum-based li
 The basic Disciplined Agile life cycle has some minor differences from the Scrum life cycle.  For the CDT-ADPQ-0117 prototype, the most important difference is that our backlog contains both product features as well as project management and enterprise integration activities (such as documentation and usability analysis) necessary to successfully deliver the product into operations.  All of these product capabilities and project activities are tracked as cards in our Trello project management board.
 
 During the Transition phase, Stanfield Systems performs the activities necessary to validate and certify the product for release into the operational product.  For some organizations, especially those with significant regulatory, security, or safety requirements this phase may involve formal documentation and certifications that take a sprint or two to complete.  In other cases, the Transition phase may be as simple as an administrative handoff.  For the CDT-ADPQ-0117 prototype, the operational deployment is fully automated; however, the RFI requirements involve some documentation and other administrative activities that may take a day or two to complete. 
-
-## Team Members (a, b)
- * Team Lead - Christine Cox
- * Product Manager - Christine Cox
- * Technical Architect - Tim Jacobs
- * Interaction Designer/User Researcher/Usability Tester - Diana Persell
- * Visual Designer - Diana Persell
- * Frontend Web Developer - Greg Fortune, Bhagyesh Patel
- * Backend Web Developer - Greg Fortune, Bhagyesh Patel
- * DevOps Engineer - Greg Fortune
-
-## User-Centric Design (c, d)
- - [ ] User team (People) - describe characteristics and number
- 
-The User-centered design (UCD) process outlines the phases throughout a design and development life-cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
-
-Here are principles we apply to ensure a design is user centered:
-
- *	The design is based upon an explicit understanding of users, tasks and environments.
- *	Users are involved throughout design and development.
- *	The design is driven and refined by user-centered evaluation.
- *	The process is iterative.
-
-### Personas and Scenarios
-During the UCD process, we created multiple Personas representing the product users. A persona is a user archetype used to help guide decisions about product features, navigation, interactions, and even visual design. 
-
-We developed scenarios depicting a fictional story about the "daily life of" or a sequence of events with the primary stakeholder group as the main character. Typically, a persona that was created earlier is used as the main character of this story. The story should be specific of the events happening that relate to the problems of the primary stakeholder group, and normally the main research questions the design process is built upon. 
-
-### Contextual Inquiry
-We simulated a contextual inquiry, which is a specific type of interview for gathering field data from users. It is usually done by one interviewer speaking to one interviewee (person being interviewed) at a time. The aim is to gather as much data as possible from the interviews for later analysis.
-
-### Affinity Diagramming
-We simulated affinity diagramming to sort large amounts of data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. Affinity diagramming can be used to:
-
-  *	analyse findings from field studies
-  * identify and group user functions as part of design
-  * analyse findings from a usability evaluation
- 
-### Journey Mapping
-We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It’s used for understanding and addressing customer needs and pain points.
-
-In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
-
-## DevOps Tools and Technologies (e, f, m, n)
-
-Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our PAAS hosting in the cloud.
-
- * GitHub - version control of code and documents, issue tracking
- * GitHub WebHook - notifies build system of check-in
- * Jenkins - build and test management
- * Amazon Web Services CodeDeploy - API for automating code deployment
- * Amazon Web Services EC2 ElasticBeans - 
- * Amazon Web Services Cloudwatch - continuous performance monitoring
- * Amazon Web Services Portal - configuration management of platform services
- * Docker - containerization
- * Swagger - RESTful API documentation
-
-## Application Tools and Technologies (k, l)
-
-Stanfield Systems used several open source tools and technologies for developing the prototype.  
-
- * Spring MVC - RESTful services
- * Bootstrap - responsive design styling
- * JQuery - client side scripting
- * Thymeleaf - view engine
- * Derby - embedded database
- * Java 8 - server side development toolkit
- * Maven - dependency and build management
- * Spring Boot - Spring quick start framework
- * Eclipse - integrated development environment.
-  * Spring STS Plugin - tools and frameworks for Spring development
-  * Spring Roo Plugin - rapid application development
-  * Maven Plugin - tools for working with Maven
-
-## Usability (g, h, i)
-
-### Style Guide 
-We developed our style guide based on [US Web Design Standards](https://standards.usa.gov/).  For the prototype, we used basic styles integrated with our development tools with minimal changes as necessary to reflect user requirements.
-
-### Section 508 Compliance
-We applied the 508 compliance approach outlined by [W3C](https://www.w3.org/WAI/eval/Overview.html). We used Thymeleaf templates to develop user interfaces that are Section 508 Compliance.  We then validated with manual checks against the [WCAG 2.0 Checklist](https://www.w3.org/TR/2005/WD-WCAG20-20051123/appendixB.html).  
-
-### Usability Testing
-In Agile, usability testing is abbreviated and lean.  We incorporate testing into each sprint with fewer participants but increased frequency.  A dashboard for each study is created which includes the test goals and logistics.  Tests are done remotely using Join Me.  Each session is recorded to assist in sharing results.  Within 24 hours after the end of a test, a results document is distributed to the team.  Any immediate findings will be shared with the team through the team collaboration tool (GitHub).
 
 ## Agile Project Management
 Stanfield Systems managed the project sprints with Trello, a collaboration and task management tool that utilizes a board, lists, and cards to effectively manage the collection of backlog activities.  The real time updates afforded by the tool were critical to manage standups with remote team members. Team members are informed about all aspects of planning and daily standup activities and understand their role in enabling success. The board is organized into individual lists to track the product backlog, sprint backlog, completed sprints, and issues/risks. The lists are further broken down into cards, or activities for categorization, prioritization and assignment. The board facilitated sprint planning and was used during the daily standups to drive discussions and decisions. Updates are real-time and interactive allowing comments, checklists, labels, and attachments promoting team collaboration.
@@ -151,3 +67,90 @@ A potential issue was identified and documented to track integration efforts, wh
 
 ### Sprint Review
 
+## RFI Requirements
+
+The remainder of this document addresses specific requirements within the RFI.
+
+### Team Members (a, b)
+ * Team Lead - Christine Cox
+ * Product Manager - Christine Cox
+ * Technical Architect - Tim Jacobs
+ * Interaction Designer/User Researcher/Usability Tester - Diana Persell
+ * Visual Designer - Diana Persell
+ * Frontend Web Developer - Greg Fortune, Bhagyesh Patel
+ * Backend Web Developer - Greg Fortune, Bhagyesh Patel
+ * DevOps Engineer - Greg Fortune
+
+### User-Centric Design (c, d)
+ - [ ] User team (People) - describe characteristics and number
+ 
+The User-centered design (UCD) process outlines the phases throughout a design and development life-cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
+
+Here are principles we apply to ensure a design is user centered:
+
+ *	The design is based upon an explicit understanding of users, tasks and environments.
+ *	Users are involved throughout design and development.
+ *	The design is driven and refined by user-centered evaluation.
+ *	The process is iterative.
+
+#### Personas and Scenarios
+During the UCD process, we created multiple Personas representing the product users. A persona is a user archetype used to help guide decisions about product features, navigation, interactions, and even visual design. 
+
+We developed scenarios depicting a fictional story about the "daily life of" or a sequence of events with the primary stakeholder group as the main character. Typically, a persona that was created earlier is used as the main character of this story. The story should be specific of the events happening that relate to the problems of the primary stakeholder group, and normally the main research questions the design process is built upon. 
+
+#### Contextual Inquiry
+We simulated a contextual inquiry, which is a specific type of interview for gathering field data from users. It is usually done by one interviewer speaking to one interviewee (person being interviewed) at a time. The aim is to gather as much data as possible from the interviews for later analysis.
+
+#### Affinity Diagramming
+We simulated affinity diagramming to sort large amounts of data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. Affinity diagramming can be used to:
+
+  *	analyse findings from field studies
+  * identify and group user functions as part of design
+  * analyse findings from a usability evaluation
+ 
+#### Journey Mapping
+We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It’s used for understanding and addressing customer needs and pain points.
+
+In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
+
+### DevOps Tools and Technologies (e, f, m, n)
+
+Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our PAAS hosting in the cloud.
+
+ * GitHub - version control of code and documents, issue tracking
+ * GitHub WebHook - notifies build system of check-in
+ * Jenkins - build and test management
+ * Amazon Web Services CodeDeploy - API for automating code deployment
+ * Amazon Web Services EC2 ElasticBeans - 
+ * Amazon Web Services Cloudwatch - continuous performance monitoring
+ * Amazon Web Services Portal - configuration management of platform services
+ * Docker - containerization
+ * Swagger - RESTful API documentation
+
+### Application Tools and Technologies (k, l)
+
+Stanfield Systems used several open source tools and technologies for developing the prototype.  
+
+ * Spring MVC - RESTful services
+ * Bootstrap - responsive design styling
+ * JQuery - client side scripting
+ * Thymeleaf - view engine
+ * Derby - embedded database
+ * Java 8 - server side development toolkit
+ * Maven - dependency and build management
+ * Spring Boot - Spring quick start framework
+ * Eclipse - integrated development environment.
+  * Spring STS Plugin - tools and frameworks for Spring development
+  * Spring Roo Plugin - rapid application development
+  * Maven Plugin - tools for working with Maven
+
+### Usability (g, h, i)
+
+#### Style Guide 
+We developed our style guide based on [US Web Design Standards](https://standards.usa.gov/).  For the prototype, we used basic styles integrated with our development tools with minimal changes as necessary to reflect user requirements.
+
+#### Section 508 Compliance
+We applied the 508 compliance approach outlined by [W3C](https://www.w3.org/WAI/eval/Overview.html). We used Thymeleaf templates to develop user interfaces that are Section 508 Compliance.  We then validated with manual checks against the [WCAG 2.0 Checklist](https://www.w3.org/TR/2005/WD-WCAG20-20051123/appendixB.html).  
+
+#### Usability Testing
+In Agile, usability testing is abbreviated and lean.  We incorporate testing into each sprint with fewer participants but increased frequency.  A dashboard for each study is created which includes the test goals and logistics.  Tests are done remotely using Join Me.  Each session is recorded to assist in sharing results.  Within 24 hours after the end of a test, a results document is distributed to the team.  Any immediate findings will be shared with the team through the team collaboration tool (GitHub).
