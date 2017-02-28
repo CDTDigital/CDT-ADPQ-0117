@@ -81,19 +81,35 @@ We developed a customer journey map, which is a visualization of the process tha
 In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
 
 ## DevOps Tools and Technologies (e, f, m, n)
- * GitHub - version control of code and documents
+
+Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our PAAS hosting in the cloud.
+
+ * GitHub - version control of code and documents, issue tracking
+ * GitHub WebHook - notifies build system of check-in
+ * Jenkins - build and test management
+ * Amazon Web Services CodeDeploy - API for automating code deployment
+ * Amazon Web Services EC2 ElasticBeans - 
+ * Amazon Web Services Cloudwatch - continuous performance monitoring
+ * Amazon Web Services Portal - configuration management of platform services
+ * Docker - containerization
  * Swagger - RESTful API documentation
- - [ ] others.....
 
 ## Application Tools and Technologies (k, l)
- * Spring MVC
- * Spring Roo
- * Derby
- * Eclipse IDE
-  * Spring STS Plugin
-  * Spring Roo Plugin 
- - [ ] others....
- - [ ] describe purpose
+
+Stanfield Systems used several open source tools and technologies for developing the prototype.  
+
+ * Spring MVC - RESTful services
+ * Bootstrap - responsive design styling
+ * JQuery - client side scripting
+ * Thymeleaf - view engine
+ * Derby - embedded database
+ * Java 8 - server side development toolkit
+ * Maven - dependency and build management
+ * Spring Boot - Spring quick start framework
+ * Eclipse - integrated development environment.
+  * Spring STS Plugin - tools and frameworks for Spring development
+  * Spring Roo Plugin - rapid application development
+  * Maven Plugin - tools for working with Maven
 
 ## Usability (g, h, i)
 
