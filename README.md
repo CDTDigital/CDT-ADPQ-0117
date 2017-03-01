@@ -52,10 +52,10 @@ Four Epic user stories, which described the project need at a very high level, w
  3.	Cancel and Track Orders
  4.	Track, Analyze, and Visualize Orders
  
-Individual user stories were derived from the Epic, color coded by category to match the Epic, and grouped together to help the developers understand the primary intent of the deconstructed user stories. The epic was then deleted from the backlog. Refer to “Epic User Stories” at <insert doclink> to review the four epics and deconstructed user stories.
+Individual user stories were derived from the Epic, color coded by category to match the Epic, and grouped together to help the developers understand the primary intent of the deconstructed user stories. The epic was then deleted from the backlog. Refer to [Epic User Stories](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Epic User Stories.docx) to review the four epics and deconstructed user stories.
 
 ### Sprint Planning
-The timeboxed sprint planning meeting is a collaborative effort to commit documented backlog items into a sprint. Due to the aggressive timeline, only two sprints were planned. The user stories were clarified by the product owner and developers prioritized and estimated the backlog for potential sprint candidates. Two project activities remained from the Inception Phase sprint related to technology. Refer to <Sprint 1 Planning.PNG> for an example of the Trello board at the beginning of the first Construction Phase sprint meeting.
+The timeboxed sprint planning meeting is a collaborative effort to commit documented backlog items into a sprint. Due to the aggressive timeline, only two sprints were planned. The user stories were clarified by the product owner and developers prioritized and estimated the backlog for potential sprint candidates. Two project activities remained from the Inception Phase sprint related to technology. See an [example of the Trello board](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint 1 Planning.PNG) at the beginning of the first Construction Phase sprint meeting.
 
 ### Sprint Backlog
 User stories, or cards, were committed to the sprint backlog list once developers confirmed they understood the development and had the capacity to meet their commitment within the sprint timebox. Once the sprint backlog reached capacity, the cards were updated with activity owners and the daily standup meetings were scheduled.
@@ -63,7 +63,7 @@ User stories, or cards, were committed to the sprint backlog list once developer
 ### Daily Scrum
 Daily standup meetings were facilitated through WebEx, where each developer informed the team of their current work, expectations of work to be completed the following day, and any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list, and then moved to the “Done Sprint 1” list in Trello once done. 
 
-A potential issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue. Refer to <Sprint1 in progress. PNG>. 
+A potential issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue (See [Sprint 1 Trello image](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint1 in progress.PNG)). 
 
 ### Sprint Review
 At the end of the sprint, the development team demonstrated completed user stories verifying a potentially shippable product increment. 
