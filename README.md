@@ -115,7 +115,7 @@ We simulated affinity diagramming to sort large amounts of data into logical gro
 #### Journey Mapping
 We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It is used for understanding and addressing customer needs and pain points.
 
-In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
+In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
 
 ### DevOps Tools and Technologies (e, f, m, n, o, p, q, r, s, t)
 
