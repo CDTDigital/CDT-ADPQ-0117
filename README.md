@@ -3,7 +3,7 @@ Prototype for CDT-ADPQ-0117
 
 ## Technical Approach
 
-Stanfield Systems applies a Disciplined Agile life cycle for product delivery (See http://www.disciplinedagiledelivery.com/process/).  Disciplined Agile is process decision framework for delivering projects of varying sizes within an enterprise environment.  Disciplined Agile recognizes that a product release is part of a larger product life cycle that operates within an operational enterprise.  Consequently, in addition to the Construction phase at the core of all agile methodologies, Disciplined Agile includes a short Inception phase to envision and plan the product release and a short Transition phase to deploy and release the product into operations.  
+Stanfield Systems applies a Disciplined Agile life cycle for product delivery (See http://www.disciplinedagiledelivery.com/process/).  Disciplined Agile is process decision framework for delivering projects of varying sizes within an enterprise environment.  Disciplined Agile recognizes that a product release is part of a larger product life cycle that operates within an operational enterprise.  The Construction phase, in which the team collaboratively develops the solution, is at the core of all agile methodologies.  In addition, Disciplined Agile includes a short Inception phase to envision and plan the product release and a short Transition phase to deploy and release the product into operations. 
 
 During the Inception phase, Stanfield Systems defines how Disciplined Agile will be implemented for a specific project or product release.  The Inception phase decisions for the CDT-ADPQ-0117 prototype were significantly influenced by the short delivery cycle and the delivery target of a prototype rather than an operational product.  This phase achieves the following goals:
 
@@ -39,7 +39,7 @@ The basic Disciplined Agile life cycle has some minor differences from the Scrum
 During the Transition phase, Stanfield Systems performs the activities necessary to validate and certify the product for release into the operational product.  For some organizations, especially those with significant regulatory, security, or safety requirements this phase may involve formal documentation and certifications that take a sprint or two to complete.  In other cases, the Transition phase may be as simple as an administrative handoff.  For the CDT-ADPQ-0117 prototype, the operational deployment is fully automated; however, the RFI requirements involve some documentation and other administrative activities that may take a day or two to complete. 
 
 ## Agile Project Management
-Stanfield Systems managed the project sprints with Trello, a collaboration and task management tool that utilizes a board, lists, and cards to effectively manage the collection of backlog activities (See [example Trello board](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Example_Trello_Board.png).  The real time updates afforded by the tool were critical to manage standups with remote team members. Team members are informed about all aspects of planning and daily standup activities and understand their role in enabling success. The board is organized into individual lists to track the product backlog, sprint backlog, completed sprints, and issues/risks. The lists are further broken down into cards, or activities for categorization, prioritization and assignment. The board facilitated sprint planning and was used during the daily standups to drive discussions and decisions. Updates are real-time and interactive allowing comments, checklists, labels, and attachments promoting team collaboration.
+Stanfield Systems managed the project sprints with Trello, a collaboration and task management tool that utilizes a board, lists, and cards to effectively manage the collection of backlog activities (See [example Trello board](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Example_Trello_Board.png)).  The real time updates afforded by the tool were critical to manage standups with remote team members. Team members are informed about all aspects of planning and daily standup activities and understand their role in enabling success. The board is organized into individual lists to track the product backlog, sprint backlog, completed sprints, and issues/risks. The lists are further broken down into cards, or activities for categorization, prioritization and assignment. The board facilitated sprint planning and was used during the daily standups to drive discussions and decisions. Updates are real-time and interactive allowing comments, checklists, labels, and attachments promoting team collaboration.
 
 ## Agile Product Development
 Stanfield Systems used an agile Scrum methodology to implement the CDT-ADPQ-0117 prototype.  
@@ -61,9 +61,9 @@ The timeboxed sprint planning meeting is a collaborative effort to commit docume
 User stories, or cards, were committed to the sprint backlog list once developers confirmed they understood the development and had the capacity to meet their commitment within the sprint timebox. Once the sprint backlog reached capacity, the cards were updated with activity owners and the daily standup meetings were scheduled.
 
 ### Daily Scrum
-Daily standup meetings were facilitated through WebEx, where each developer informed the team of their current work, expectations of work to be completed the following day, and any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list, and then moved to the “Done Sprint 1” list in Trello once done. 
+Daily standup meetings were facilitated through WebEx, where each developer informed the team of work completed the previous day, what they will work on today, and any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list, and then moved to the “Done Sprint 1” list in Trello once done. 
 
-A potential issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue (See [Sprint 1 Trello image](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint1 in progress.PNG)). 
+An issue was identified and documented to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue (See [Sprint 1 Trello image](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint1 in progress.PNG)). 
 
 ### Sprint Review
 At the end of the sprint, the development team demonstrated completed user stories verifying a potentially shippable product increment. 
@@ -88,9 +88,9 @@ The remainder of this document addresses specific requirements within the RFI.
 ### User-Centric Design (c, d, j)
  - [ ] User team (People) - describe characteristics and number
  
-The User-centered design (UCD) process outlines the phases throughout a design and development life-cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
+The User-centered design (UCD) process outlines the phases throughout a design and development life cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
 
-Here are principles we apply to ensure a design is user centered:
+Here are principles we apply to ensure a design is user-centered:
 
  *	The design is based upon an explicit understanding of users, tasks and environments.
  *	Users are involved throughout design and development.
@@ -108,18 +108,18 @@ We simulated a contextual inquiry, which is a specific type of interview for gat
 #### Affinity Diagramming
 We simulated affinity diagramming to sort large amounts of data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. Affinity diagramming can be used to:
 
-  *	analyse findings from field studies
-  * identify and group user functions as part of design
-  * analyse findings from a usability evaluation
+  *	Analyze findings from field studies
+  * Identify and group user functions as part of design
+  * Analyze findings from a usability evaluation
  
 #### Journey Mapping
-We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It’s used for understanding and addressing customer needs and pain points.
+We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It is used for understanding and addressing customer needs and pain points.
 
 In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
 
 ### DevOps Tools and Technologies (e, f, m, n, o, p, q, r, s, t)
 
-Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our PAAS hosting in the cloud.
+Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our IAAS hosting in the cloud.
 
  * GitHub - version control of code and documents, issue tracking
  * GitHub WebHook - notifies build system of check-in
@@ -157,7 +157,7 @@ Stanfield Systems used several open source tools and technologies for developing
 We developed our style guide based on [US Web Design Standards](https://standards.usa.gov/).  For the prototype, we used basic styles integrated with our development tools with minimal changes as necessary to reflect user requirements.
 
 #### Section 508 Compliance
-We applied the 508 compliance approach outlined by [W3C](https://www.w3.org/WAI/eval/Overview.html). We used Thymeleaf templates to develop user interfaces that are Section 508 Compliance.  We then validated with manual checks against the [WCAG 2.0 Checklist](https://www.w3.org/TR/2005/WD-WCAG20-20051123/appendixB.html).  
+We applied the 508 compliance approach outlined by [W3C](https://www.w3.org/WAI/eval/Overview.html). We used Thymeleaf templates to develop user interfaces that are Section 508 Compliant.  We then validated with manual checks against the [WCAG 2.0 Checklist](https://www.w3.org/TR/2005/WD-WCAG20-20051123/appendixB.html).  
 
 #### Usability Testing
 In Agile, usability testing is abbreviated and lean.  We incorporate testing into each sprint with fewer participants but increased frequency.  A dashboard for each study is created which includes the test goals and logistics.  Tests are done remotely using Join Me.  Each session is recorded to assist in sharing results.  Within 24 hours after the end of a test, a results document is distributed to the team.  Any immediate findings will be shared with the team through the team collaboration tool (GitHub).
