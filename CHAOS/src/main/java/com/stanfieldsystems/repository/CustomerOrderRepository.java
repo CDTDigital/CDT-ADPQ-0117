@@ -1,6 +1,10 @@
 package com.stanfieldsystems.repository;
 import com.stanfieldsystems.CustomerOrder;
-import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRepository;
+import org.springframework.stereotype.Repository;
+import com.stanfieldsystems.Status;
+import com.stanfieldsystems.UserInfo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * = CustomerOrderRepository
@@ -8,6 +12,22 @@ import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRep
  * TODO Auto-generated class documentation
  *
  */
-@RooJpaRepository(entity = CustomerOrder.class)
-public interface CustomerOrderRepository {
+@Repository
+public interface CustomerOrderRepository extends JpaRepository<CustomerOrder, Long>, CustomerOrderRepositoryCustom {
+
+    /**
+     * TODO Auto-generated method documentation
+     *
+     * @param userInfo
+     * @return Long
+     */
+    public abstract long countByUserInfo(UserInfo userInfo);
+
+    /**
+     * TODO Auto-generated method documentation
+     *
+     * @param status
+     * @return Long
+     */
+    public abstract long countByStatus(Status status);
 }

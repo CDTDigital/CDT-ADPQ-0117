@@ -4,7 +4,12 @@ import com.stanfieldsystems.service.api.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.core.convert.ConversionService;
-import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDeserializer;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.ObjectCodec;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import io.springlets.web.NotFoundException;
+import org.springframework.boot.jackson.JsonComponent;
 
 /**
  * = CategoryDeserializer
@@ -12,7 +17,8 @@ import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDe
  * TODO Auto-generated class documentation
  *
  */
-@RooDeserializer(entity = Category.class)
+//@RooDeserializer(entity = Category.class)
+@JsonComponent
 public class CategoryDeserializer extends JsonObjectDeserializer<Category> {
 
     /**
@@ -37,5 +43,24 @@ public class CategoryDeserializer extends JsonObjectDeserializer<Category> {
     public CategoryDeserializer(CategoryService categoryService, ConversionService conversionService) {
         this.categoryService = categoryService;
         this.conversionService = conversionService;
+    }
+
+    /**
+     * TODO Auto-generated method documentation
+     *
+     * @param jsonParser
+     * @param context
+     * @param codec
+     * @param tree
+     * @return Category
+     */
+    public Category deserializeObject(JsonParser jsonParser, DeserializationContext context, ObjectCodec codec, JsonNode tree) {
+        String idText = tree.asText();
+        Long id = conversionService.convert(idText, Long.class);
+        Category category = categoryService.findOne(id);
+        if (category == null) {
+            throw new NotFoundException("Category not found");
+        }
+        return category;
     }
 }

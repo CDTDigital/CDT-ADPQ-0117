@@ -1,6 +1,8 @@
 package com.stanfieldsystems.repository;
 import com.stanfieldsystems.Status;
-import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * = StatusRepository
@@ -8,6 +10,6 @@ import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRep
  * TODO Auto-generated class documentation
  *
  */
-@RooJpaRepository(entity = Status.class)
-public interface StatusRepository {
+@Repository
+public interface StatusRepository extends JpaRepository<Status, Long>, StatusRepositoryCustom {
 }

@@ -1,6 +1,8 @@
 package com.stanfieldsystems.web;
 import com.stanfieldsystems.UserRole;
-import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooJsonMixin;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.stanfieldsystems.UserInfo;
+import java.util.Set;
 
 /**
  * = UserRoleJsonMixin
@@ -8,6 +10,13 @@ import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooJs
  * TODO Auto-generated class documentation
  *
  */
-@RooJsonMixin(entity = UserRole.class)
+//@RooJsonMixin(entity = UserRole.class)
 public abstract class UserRoleJsonMixin {
+
+    /**
+     * TODO Auto-generated field documentation
+     *
+     */
+    @JsonIgnore
+    private Set<UserInfo> userInfos;
 }

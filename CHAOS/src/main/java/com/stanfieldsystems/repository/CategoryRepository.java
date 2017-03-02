@@ -1,6 +1,8 @@
 package com.stanfieldsystems.repository;
 import com.stanfieldsystems.Category;
-import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * = CategoryRepository
@@ -8,6 +10,6 @@ import org.springframework.roo.addon.layers.repository.jpa.annotations.RooJpaRep
  * TODO Auto-generated class documentation
  *
  */
-@RooJpaRepository(entity = Category.class)
-public interface CategoryRepository {
+@Repository
+public interface CategoryRepository extends JpaRepository<Category, Long>, CategoryRepositoryCustom {
 }

@@ -1,6 +1,8 @@
 package com.stanfieldsystems.web;
 import com.stanfieldsystems.Category;
-import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooJsonMixin;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.stanfieldsystems.Product;
+import java.util.Set;
 
 /**
  * = CategoryJsonMixin
@@ -8,6 +10,13 @@ import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooJs
  * TODO Auto-generated class documentation
  *
  */
-@RooJsonMixin(entity = Category.class)
+//@RooJsonMixin(entity = Category.class)
 public abstract class CategoryJsonMixin {
+
+    /**
+     * TODO Auto-generated field documentation
+     *
+     */
+    @JsonIgnore
+    private Set<Product> products;
 }

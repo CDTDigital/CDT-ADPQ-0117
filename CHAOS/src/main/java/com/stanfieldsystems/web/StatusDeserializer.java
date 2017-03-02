@@ -4,7 +4,12 @@ import com.stanfieldsystems.service.api.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.core.convert.ConversionService;
-import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDeserializer;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.ObjectCodec;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import io.springlets.web.NotFoundException;
+import org.springframework.boot.jackson.JsonComponent;
 
 /**
  * = StatusDeserializer
@@ -12,7 +17,8 @@ import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDe
  * TODO Auto-generated class documentation
  *
  */
-@RooDeserializer(entity = Status.class)
+//@RooDeserializer(entity = Status.class)
+@JsonComponent
 public class StatusDeserializer extends JsonObjectDeserializer<Status> {
 
     /**
@@ -37,5 +43,24 @@ public class StatusDeserializer extends JsonObjectDeserializer<Status> {
     public StatusDeserializer(StatusService statusService, ConversionService conversionService) {
         this.statusService = statusService;
         this.conversionService = conversionService;
+    }
+
+    /**
+     * TODO Auto-generated method documentation
+     *
+     * @param jsonParser
+     * @param context
+     * @param codec
+     * @param tree
+     * @return Status
+     */
+    public Status deserializeObject(JsonParser jsonParser, DeserializationContext context, ObjectCodec codec, JsonNode tree) {
+        String idText = tree.asText();
+        Long id = conversionService.convert(idText, Long.class);
+        Status status = statusService.findOne(id);
+        if (status == null) {
+            throw new NotFoundException("Status not found");
+        }
+        return status;
     }
 }

@@ -4,7 +4,12 @@ import com.stanfieldsystems.service.api.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.core.convert.ConversionService;
-import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDeserializer;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.ObjectCodec;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonNode;
+import io.springlets.web.NotFoundException;
+import org.springframework.boot.jackson.JsonComponent;
 
 /**
  * = ProductDeserializer
@@ -12,7 +17,8 @@ import org.springframework.roo.addon.web.mvc.controller.annotations.config.RooDe
  * TODO Auto-generated class documentation
  *
  */
-@RooDeserializer(entity = Product.class)
+//@RooDeserializer(entity = Product.class)
+@JsonComponent
 public class ProductDeserializer extends JsonObjectDeserializer<Product> {
 
     /**
@@ -37,5 +43,24 @@ public class ProductDeserializer extends JsonObjectDeserializer<Product> {
     public ProductDeserializer(ProductService productService, ConversionService conversionService) {
         this.productService = productService;
         this.conversionService = conversionService;
+    }
+
+    /**
+     * TODO Auto-generated method documentation
+     *
+     * @param jsonParser
+     * @param context
+     * @param codec
+     * @param tree
+     * @return Product
+     */
+    public Product deserializeObject(JsonParser jsonParser, DeserializationContext context, ObjectCodec codec, JsonNode tree) {
+        String idText = tree.asText();
+        Long id = conversionService.convert(idText, Long.class);
+        Product product = productService.findOne(id);
+        if (product == null) {
+            throw new NotFoundException("Product not found");
+        }
+        return product;
     }
 }
