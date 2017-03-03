@@ -147,7 +147,7 @@
     function loadData(data, callback, settings) {
       var datatables = this.DataTable();
 
-      //console.log('Loading data for datatables: ' + getTableId(datatables));
+      console.log('Loading data for datatables: ' + getTableId(datatables));
 
       var url = getLoadUrl(datatables);
       if (url) {
