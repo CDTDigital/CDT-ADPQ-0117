@@ -17,7 +17,7 @@ public class RetrievedCategories {
         String line = null;
         Scanner scanner = null;
         int index = 0;
-        List<Category> listCategory = new ArrayList();
+        List<Category> listCategory = new ArrayList<Category>();
         while ((line = reader.readLine()) != null) {
             Category category = new Category();
             scanner = new Scanner(line);
