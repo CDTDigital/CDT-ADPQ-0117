@@ -98,7 +98,8 @@ $(document).ready(function() {
 		
 		<form action="proceedOrder" method="Post" >
 		              	<button id="submit" class="btn btn-success" >Proceed Order </button> 
-		</form>
+		                <button type="button" onclick="location.href='${pageContext.request.contextPath}/placeOrder';" name="cancel" id="cancel" class="btn btn-primary" >Cancel</button>
+	   </form>
 		
 		</div>
 		</div>
