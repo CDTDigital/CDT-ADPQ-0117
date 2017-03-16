@@ -162,5 +162,13 @@ public class CustomerOrder {
 		return null;
 	}
     
+    public CustomerOrder customerOrderById(Long id){
+  		JPAInitEMF jpa=new JPAInitEMF();
+  		CustomerOrder customerOrder=new CustomerOrder();
+  		customerOrder.setId(id);
+  		customerOrder=jpa.getEm().find(CustomerOrder.class,customerOrder.getId() );
+  		return customerOrder;
+  	}
+    
     
 }

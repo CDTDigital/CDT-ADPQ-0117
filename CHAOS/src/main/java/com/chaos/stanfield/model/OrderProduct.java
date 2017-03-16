@@ -14,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Version;
+import javax.persistence.criteria.Order;
 
 import com.chaos.stanfield.utils.JPAInitEMF;
 
@@ -129,7 +130,14 @@ public class OrderProduct {
 		return null;
 	}
     
-    
+    public OrderProduct orderProductById(Long id){
+  		JPAInitEMF jpa=new JPAInitEMF();
+  		OrderProduct orderProduct=new OrderProduct();
+  		orderProduct.setId(id);
+  		orderProduct=jpa.getEm().find(OrderProduct.class,orderProduct.getId() );
+  		return orderProduct;
+  	}
+     
     
     
     
