@@ -40,8 +40,8 @@ $(document).ready(function() {
 
 	<div id="header"></div>
 	<section style="text-align: center;">
-			<h1 style="color:rgb(51, 122, 183);margin-top: 20% ">CHAOS DashBoard</h1>
-	
+			<h1 style="color:rgb(51, 122, 183);margin-top: 20% ">Welcome to CHAOS</h1>
+			<h3>Computer Hardware and Application Ordering System</h3>
 	</section>
 
 	<div id="footer" style="margin-top: 250px"></div>
