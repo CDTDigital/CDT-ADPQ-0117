@@ -137,11 +137,7 @@ We developed scenarios depicting a fictional story about the "daily life of" or 
 We simulated a contextual inquiry, which is a specific type of interview for gathering field data from users. It is usually done by one interviewer speaking to one interviewee (person being interviewed) at a time. The aim is to gather as much data as possible from the interviews for later analysis.
 
 #### Affinity Diagramming
-We simulated affinity diagramming to sort large amounts of data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. Affinity diagramming can be used to:
-
-  *	Analyze findings from field studies
-  * Identify and group user functions as part of design
-  * Analyze findings from a usability evaluation
+Stanfield Systems also simulated affinity diagramming to sort data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. [Affinity diagramming](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/UCD_Affinity_Diagramming.pptx) was used to identify and group user functions as part of design and analyze the findings from a usability evaluation.
  
 #### Journey Mapping
 We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It is used for understanding and addressing customer needs and pain points.
