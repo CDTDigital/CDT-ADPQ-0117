@@ -70,7 +70,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-									 <button type="submit" style="background-color: #1abc9c" name="submit" id="submit" class="btn btn-success" >Update</button>
+									 <button type="submit" style="background-color: #1abc9c" name="submit" id="submit" class="btn btn-success" >Save</button>
 									  <button type="button" onclick="location.href='${pageContext.request.contextPath}/categories';" name="cancel" id="cancel" class="btn btn-primary" >Cancel</button>
 	        				</div>
 						</div>
