@@ -1,6 +1,10 @@
 # CDT-ADPQ-0117
 [Prototype](http://52.52.140.5/CHAOS/) for CDT-ADPQ-0117
 
+To log in as an administrator, log in as "greg" with a password of "greg123"
+
+To log in as a user, log in as "matt" with a password of "matt123"
+
 ## Technical Approach
 
 Stanfield Systems developed this prototype using a fully open source set of tools and components. Not only is our application stack completely open source, our development tools and continuous integration environments are too.
@@ -141,7 +145,7 @@ We developed scenarios depicting a fictional story about the "daily life of" or 
 
 #### Online Survey
 Because our user team was remote, Stanfield Systems distributed an online survey in Survey Monkey, (https://www.surveymonkey.com/r/JFQYTHB), prior to development to gather information about the user’s typical online shopping experiences. The questionnaire included a mix of ten open-ended and closed questions soliciting general responses regarding the comfort, reliability, and ease of use of their recent shopping experiences. 
-While the sample size is not indicative the population of users for a production system, the results provided a sense of how consumers would expect to use an ordering system. The survey results  were analyzed using built in Survey Monkey analytic tools. This knowledge helped drive decisions on usability and visual design.
+While the sample size is not indicative the population of users for a production system, the results provided a sense of how consumers would expect to use an ordering system. The [survey results](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/ADPQSurvey.pdf) were analyzed using built in Survey Monkey analytic tools. This knowledge helped drive decisions on usability and visual design.
 
 #### Affinity Diagramming
 Stanfield Systems also simulated affinity diagramming to sort data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. [Affinity diagramming](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/UCD_Affinity_Diagramming.pptx) was used to identify and group user functions as part of design and analyze the findings from a usability evaluation.
