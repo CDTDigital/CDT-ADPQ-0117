@@ -1,11 +1,11 @@
 # CDT-ADPQ-0117
-Prototype for CDT-ADPQ-0117
+[Prototype](http://52.52.140.5/CHAOS/) for CDT-ADPQ-0117
 
 ## Technical Approach
 
 Stanfield Systems developed this prototype using a fully open source set of tools and components. Not only is our application stack completely open source, our development tools and continuous integration environments are too.
 
-Our intent for this project was to choose the simplest combination of technologies that supported development of the prototype while retaining some resemblance to the stack we would choose for a production app. Certain design decisions we made here would be different for a production application. For example, a production application would likely use Angular for user interface development rather than Java Server Pages.
+Our intent for this project was to choose the simplest combination of technologies that supported development of the prototype while retaining some resemblance to the stack we would choose for a production app. Certain design decisions we made here would be different for a production application. For example, a production application would likely use Angular for user interface (UI) development rather than Java Server Pages.
 
 For the database layer we chose PostgreSQL 9 for its advanced features, scalability, and security. The PostgreSQL database is run in a container from the official Docker repository on Docker Hub. We used Flyway integration with Maven to reset the database on every build, so database persistence on a volume outside the container was not needed or implemented.
 
@@ -86,15 +86,17 @@ Four Epic user stories, which described the project need at a very high level, w
 Individual user stories were derived from the Epic, color coded by category to match the Epic, and grouped together to help the developers understand the primary intent of the deconstructed user stories. The epic was then deleted from the backlog. Refer to [Epic User Stories](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Epic User Stories.docx) to review the four epics and deconstructed user stories.
 
 ### Sprint Planning
-The timeboxed sprint planning meeting is a collaborative effort to commit documented backlog items into a sprint. Due to the aggressive timeline, only two sprints were planned. The user stories were clarified by the product owner and developers prioritized and estimated the backlog for potential sprint candidates. Two project activities remained from the Inception Phase sprint related to technology. See an [example of the Trello board](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint 1 Planning.PNG) at the beginning of the first Construction Phase sprint meeting.
+The timeboxed sprint planning meeting is a collaborative effort to commit documented backlog items into a sprint. Due to the aggressive timeline, only two Construction phase sprints were planned. The user stories were clarified by the product owner and developers prioritized and estimated the backlog for potential sprint candidates. Additional user-centric design requirements were added to the user story cards based on input from the Product Owner. Additional details included example screenshots, or expected specifications. See [User Story Details](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/User_Story_UCD_Detail.docx) for an example of a user story card updated with user-centric detail.
+
+Two project activities remained from the Inception Phase sprint related to technology. See an [example of the Trello board](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint_1_Planning.PNG) at the beginning of the first Construction Phase sprint meeting.
 
 ### Sprint Backlog
 User stories, or cards, were committed to the sprint backlog list once developers confirmed they understood the development and had the capacity to meet their commitment within the sprint timebox. Once the sprint backlog reached capacity, the cards were updated with activity owners and the daily standup meetings were scheduled.
 
 ### Daily Scrum
-Daily standup meetings were facilitated through WebEx, where each developer informed the team of work completed the previous day, what they will work on today, and any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list, and then moved to the “Done Sprint 1” list in Trello once done. 
+Daily standup meetings were facilitated through WebEx, where each developer informed the team of work completed the previous day, what they will work on the present day, and discuss any challenges. As developers began working on an assigned item in the Sprint Backlog, the card was moved to the “In Progress” list. Once completed, the card was moved to the “Done Sprint” list in Trello. 
 
-An issue was identified and documented during execution of Sprint 1 to track integration efforts, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue (See [Sprint 1 Trello image](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint1 in progress.PNG)). 
+An issue was identified and documented during execution of Sprint 1 to track the continuous integration, which presented a technology challenge. To mitigate the risk of losing momentum due to the aggressive timeline, or the allocation of resources, additional backlog items not dependent on the technology were added to the sprint and worked on by other developers during the sprint. This allowed the integration owner to focus on resolving the issue (See [Sprint 1 Trello image](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/Sprint1_inprogress.PNG)). 
 
 ### Sprint Review
 At the end of the sprint, the development team demonstrated completed user stories verifying a potentially shippable product increment. 
@@ -117,11 +119,15 @@ The remainder of this document addresses specific requirements within the RFI.
  * DevOps Engineer - Greg Fortune
 
 ### User-Centric Design (c, d, j)
- - [ ] User team (People) - describe characteristics and number
- 
-The User-centered design (UCD) process outlines the phases throughout a design and development life cycle all while focusing on gaining a deep understanding of who will be using the product. The international standard 13407 is the basis for many UCD methodologies. It’s important to note that the UCD process does not specify exact methods for each phase. 
+A sample set of nine users not involved in development of the prototype were identified to provide iterative input into the design, using user-centered design processes, and perform usability testing as indicated below:
 
-Here are principles we apply to ensure a design is user-centered:
+ * Three users represent users familiar with online shopping
+ * Two user represent a user less familiar with online shopping
+ * Four users represent users familiar with technology and support
+ 
+The User-centered design (UCD) process outlines the phases throughout a design and development life cycle all while focusing on gaining a deep understanding of who will be using the product. It is important to note that the UCD process does not specify exact methods for each phase. 
+
+Here are the principles Stanfield Systems applies to ensure a design is user-centered:
 
  *	The design is based upon an explicit understanding of users, tasks and environments.
  *	Users are involved throughout design and development.
@@ -129,21 +135,17 @@ Here are principles we apply to ensure a design is user-centered:
  *	The process is iterative.
 
 #### Personas and Scenarios
-During the UCD process, we created multiple Personas representing the product users. A persona is a user archetype used to help guide decisions about product features, navigation, interactions, and even visual design. 
+During the UCD process, we created three [Personas](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/UCD_Personas.pptx) representing the product users. A persona is a user archetype used to help guide decisions about product features, navigation, interactions, and even visual design. 
 
-We developed scenarios depicting a fictional story about the "daily life of" or a sequence of events with the primary stakeholder group as the main character. Typically, a persona that was created earlier is used as the main character of this story. The story should be specific of the events happening that relate to the problems of the primary stakeholder group, and normally the main research questions the design process is built upon. 
+We developed scenarios depicting a fictional story about the "daily life of" or a sequence of events with the primary stakeholder group as the main character. This person is used as the main character of the story. The story is specific of the events happening relating to the problems of the primary stakeholder group, and the main research questions the design process is built upon. 
 
-#### Contextual Inquiry
-We simulated a contextual inquiry, which is a specific type of interview for gathering field data from users. It is usually done by one interviewer speaking to one interviewee (person being interviewed) at a time. The aim is to gather as much data as possible from the interviews for later analysis.
+#### Online Survey
+Because our user team was remote, Stanfield Systems distributed an online survey in Survey Monkey, (https://www.surveymonkey.com/r/JFQYTHB), prior to development to gather information about the user’s typical online shopping experiences. The questionnaire included a mix of ten open-ended and closed questions soliciting general responses regarding the comfort, reliability, and ease of use of their recent shopping experiences. 
+While the sample size is not indicative the population of users for a production system, the results provided a sense of how consumers would expect to use an ordering system. The survey results  were analyzed using built in Survey Monkey analytic tools. This knowledge helped drive decisions on usability and visual design.
 
 #### Affinity Diagramming
 Stanfield Systems also simulated affinity diagramming to sort data into logical groups. With affinity diagraming, existing items and/or new items identified by individuals are written on sticky notes, which are sorted into categories as a workshop activity. [Affinity diagramming](https://github.com/StanfieldSystems/CDT-ADPQ-0117/tree/master/documents/UCD_Affinity_Diagramming.pptx) was used to identify and group user functions as part of design and analyze the findings from a usability evaluation.
  
-#### Journey Mapping
-We developed a customer journey map, which is a visualization of the process that a person goes through in order to accomplish a goal. It is used for understanding and addressing customer needs and pain points.
-
-In its most basic form, journey mapping starts by compiling a series of user goals and actions into a timeline skeleton. Next, the skeleton is fleshed out with user thoughts and emotions in order to create a narrative. Finally, that narrative is condensed into a visualization used to communicate insights that will inform design processes.
-
 ### DevOps Tools and Technologies (e, f, m, n, o, p, q, r, s, t)
 
 Stanfield Systems uses several open source tools and technologies to support continuous integration and DevOps.  We use free services from Amazon Web Services for our IAAS hosting in the cloud.
@@ -183,7 +185,7 @@ To build the project, perform the following steps:
  *	Copy the war file in the target folder to the app deployment folder of your Java Server.
  *	Start your Java server
  
-####Optional (Docker)
+#### Optional (Docker)
 
 Both the database and application servers can be run from Docker containers if desired.  
 
