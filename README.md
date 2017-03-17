@@ -3,6 +3,37 @@ Prototype for CDT-ADPQ-0117
 
 ## Technical Approach
 
+Stanfield Systems developed this prototype using a fully open source set of tools and components. Not only is our application stack completely open source, our development tools and continuous integration environments are too.
+
+Our intent for this project was to choose the simplest combination of technologies that supported development of the prototype while retaining some resemblance to the stack we would choose for a production app. Certain design decisions we made here would be different for a production application. For example, a production application would likely use Angular for user interface development rather than Java Server Pages.
+
+For the database layer we chose PostgreSQL 9 for its advanced features, scalability, and security. The PostgreSQL database is run in a container from the official Docker repository on Docker Hub. We used Flyway integration with Maven to reset the database on every build, so database persistence on a volume outside the container was not needed or implemented.
+
+The application was written in Java 8 using the Spring MVC framework. We use JPA entities to interact with the database. We have demonstrated the use of both internal controller methods and published REST endpoints for accessing data. The rest endpoints implement the Swagger API for documentation and testing of the endpoints.
+
+The UI is implemented using Java Server Pages, JQuery and Bootstrap. The Data Tables plugin for JQuery is used to facilitate sorting and paging when displaying tabular data. The site is designed to be responsive to any screen size or device.
+
+JUnit was implemented in the project to facilitate unit testing.
+
+Our Continuous Integration (CI) environment consists of an Ubuntu server running as a IaaS VPC hosted by Amazon AWS. This server has Jenkins, Maven, and Docker installed on it and is configured to build when it receives a check in notification from a GitHub WebHook. The Jenkins server pulls the latest version, builds it using maven and runs a script if the build is successful. The script copies the newly compiled WAR file to a folder that contains our support files for Docker, stops our running application container, configures and builds a new container image using a Dockerfile, then launches the new container. Our application container is based on CentOS and runs Tomcat 9 over Java 8.
+
+For development, we used the Spring Tool Suite, which is based on Eclipse. We used Java JDK 8, and built using Maven 3. Tomcat 9 was used to debug/run builds.
+
+### Data Flow 
+To demonstrate how the application flows data through its layers, we will use the example of adding a product.
+
+When an admin wants to add a new product to the database, they would browse to http://52.52.140.5/CHAOS/create-product-form. This maps to the Product controller (/src/main/java/com/chaos/stanfield/controller/ProductController.java) which sets up our model (/src/main/java/com/chaos/stanfield/model/Product.java) and calls the view product/create (/src/main/webapp/WEB-INF/pages/product/create), which loads the form used to add a new product.
+
+The form has its action set to "createProduct" with a method of "POST", so when the submit button is clicked the form posts its data to the url /createProduct, which is again handled by our Product controller.
+
+The createProduct function takes the parameters from the form submission and uses them to populate a product instance. This instance is then passed to an instance of the JPAInitEMF class using the InsertEntity call of that class.
+
+JPAInitEMF (/src/main/java/com/chaos/stanfield/utils/JPAInitEMF.java) is a class that facilitates passing objects to the Entity Manager so we don't have to write separate methods for handling each entity. In this case our Product model is passed to the Entity Manager, which is instructed to persist the object and commit the transaction.
+
+The persistence connection is configured using a persistence.xml file (/src/main/resources/META-INF/persistence.xml).
+
+## Agile Methodology
+
 Stanfield Systems applies a Disciplined Agile life cycle for product delivery (See http://www.disciplinedagiledelivery.com/process/).  Disciplined Agile is a process decision framework for delivering projects of varying sizes within an enterprise environment.  Disciplined Agile recognizes that a product release is part of a larger product life cycle that operates within an operational enterprise.  The Construction phase, in which the team collaboratively develops the solution, is at the core of all agile methodologies.  In addition, Disciplined Agile includes a short Inception phase to envision and plan the product release and a short Transition phase to deploy and release the product into operations. 
 
 During the Inception phase, Stanfield Systems defines how Disciplined Agile will be implemented for a specific project or product release.  The Inception phase decisions for the CDT-ADPQ-0117 prototype were significantly influenced by the short delivery cycle and the delivery target of a prototype rather than an operational product.  This phase achieves the following goals:
@@ -124,8 +155,6 @@ Stanfield Systems uses several open source tools and technologies to support con
  * GitHub - version control of code and documents, issue tracking
  * GitHub WebHook - notifies build system of check-in
  * Jenkins - build and test management
- * Amazon Web Services CodeDeploy - API for automating code deployment
- * Amazon Web Services EC2 ElasticBeans - 
  * Amazon Web Services Cloudwatch - continuous performance monitoring
  * Amazon Web Services Portal - configuration management of platform services
  * Docker - containerization
@@ -133,22 +162,50 @@ Stanfield Systems uses several open source tools and technologies to support con
 
 Documentation for installing and running the prototype on another machine is provided in the <>
 
+### Installing and running the prototype on another machine
+
+These instructions assume that the user has properly configured their environment for building and deploying a Java application. This includes installation of an appropriate Java JDK, Maven, modifications to the path, and setup of any required environment variables.
+
+#### Prerequisites
+
+In order to deploy the application in a new environment, the following prerequisites must be met:
+
+ *	Java JDK 8
+ * Java Server that supports Java 8 (Tomcat, Glassfish, etc.)
+ *	Maven 3
+ *	PostgreSQL database
+ *	Docker (optional)
+ 
+#### Building
+
+To build the project, perform the following steps:
+
+ *	Update the pom.xml file so that the Flyway Plugin configuration matches the location and authentication requirements of your database server.
+ *	Run the command  mvn flyway:migrate  from the project folder to setup and populate your database
+ *	Update the /src/main/resources/META-INF/persistence.xml file with the correct JDBC connection string and authentication information 
+ *	Run the command  mvn install  from the project folder
+ *	Copy the war file in the target folder to the app deployment folder of your Java Server.
+ *	Start your Java server
+ 
+####Optional (Docker)
+
+Both the database and application servers can be run from Docker containers if desired.  
+
 ### Application Tools and Technologies (k, l, n)
 
 Stanfield Systems used several open source tools and technologies for developing the prototype.  
 
  * Spring MVC - RESTful services
+ *	Java Persistence Objects (JPA) - object relational mapping (ORM)
+ *	Java Server Pages (JSP) - page templating
  * Bootstrap - responsive design styling
  * JQuery - client side scripting
- * Thymeleaf - view engine
- * Derby - embedded database
+ * PostgresSQL - open source database
  * JUnit - automated unit testing
  * Java 8 - server side development toolkit
  * Maven - dependency and build management
- * Spring Boot - Spring quick start framework
  * Eclipse - integrated development environment.
   * Spring STS Plugin - tools and frameworks for Spring development
-  * Spring Roo Plugin - rapid application development
   * Maven Plugin - tools for working with Maven
 
 ### Usability (g, h, i)
