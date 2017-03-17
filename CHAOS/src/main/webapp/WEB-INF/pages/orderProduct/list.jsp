@@ -67,9 +67,6 @@ $(document).ready(function() {
 						<td>${items.customerOrder.id}</td>
 						<td>
 							<div class="btn-group" role="group"	aria-label="Password operations">
-												<a href="${pageContext.request.contextPath}/deleteOrderProduct?id=${items.id}">
-												  <span class="glyphicon glyphicon-trash"></span>
-												</a> &nbsp;
 												<a href="${pageContext.request.contextPath}/editOrderProduct?id=${items.id}">
 												  <span class="glyphicon glyphicon-pencil"></span>
 												</a>
